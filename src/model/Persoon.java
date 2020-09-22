@@ -15,15 +15,16 @@ public class Persoon {
     private String naam;
     private String woonplaats;
     private double maandSalaris;
+    private Afdeling afdeling;
 
-    public Persoon(String naam, String woonplaats, double maandsalaris) {
+    public Persoon(String naam, String woonplaats, double maandsalaris, Afdeling afdeling) {
         this.naam = naam;
         this.woonplaats = woonplaats;
         this.maandSalaris = maandsalaris;
         this.personeelsNummer = ++aantalPersonen;
     }
 
-    public Persoon(String naam) {this(naam, "Onbekend", 0); }
+    public Persoon(String naam) {this(naam, "Onbekend", 0, new Afdeling()); }
 
     public Persoon() {this("Onbekend"); }
 
@@ -49,5 +50,14 @@ public class Persoon {
     public double getMaandSalaris() {
         return maandSalaris;
     }
+
+    public Afdeling getAfdeling() {
+        return afdeling;
+    }
+
+    public static int getAantalPersonen() {
+        return aantalPersonen;
+    }
+
 }
 
