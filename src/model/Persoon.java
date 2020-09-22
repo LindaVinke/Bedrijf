@@ -3,16 +3,18 @@ package model;
 /**
  * @author Linda Vinke
  *
- * Uitwerking van opdracht 1.1 Bedrijf (class)
+ * Uitwerking van opdracht 2.1 Bedrijf (class)
  *
  * Doel: oefenen met OOP
  */
 public class Persoon {
+    private static double GRENSWAARDE_BONUS = 4500.00;
+
     public static int aantalPersonen = 0;
-    public int personeelsNummer;
-    public String naam;
-    public String woonplaats;
-    public double maandSalaris;
+    private int personeelsNummer;
+    private String naam;
+    private String woonplaats;
+    private double maandSalaris;
 
     public Persoon(String naam, String woonplaats, double maandsalaris) {
         this.naam = naam;
@@ -21,23 +23,31 @@ public class Persoon {
         this.personeelsNummer = ++aantalPersonen;
     }
 
-    public Persoon(String naam) {
-        this.naam = naam;
-        this.woonplaats = "Onbekend";
-        this.maandSalaris = 0;
-        this.personeelsNummer = ++aantalPersonen;
-    }
+    public Persoon(String naam) {this(naam, "Onbekend", 0); }
 
-    public Persoon() {
-        this.naam = "Onbekend";
-        this.woonplaats = "Onbekend";
-        this.maandSalaris = 0;
-        this.personeelsNummer = ++aantalPersonen;
-    }
+    public Persoon() {this("Onbekend"); }
 
     public double berekenJaarInkomen() {
         final double MAANDEN_PER_JAAR = 12;
         double jaarInkomen = maandSalaris * MAANDEN_PER_JAAR;
         return jaarInkomen;
     }
+
+    public boolean heeftRechtOpBonus(){ return  maandSalaris >= GRENSWAARDE_BONUS;
+    }
+
+    public int getPersoneelsNummer() {
+        return personeelsNummer;
+    }
+    public String getNaam() {
+        return naam;
+    }
+    public String getWoonplaats() {
+        return woonplaats;
+    }
+
+    public double getMaandSalaris() {
+        return maandSalaris;
+    }
 }
+
