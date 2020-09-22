@@ -22,6 +22,7 @@ public class Persoon {
         this.woonplaats = woonplaats;
         this.maandSalaris = maandsalaris;
         this.personeelsNummer = ++aantalPersonen;
+        this.afdeling = afdeling;
     }
 
     public Persoon(String naam) {this(naam, "Onbekend", 0, new Afdeling()); }

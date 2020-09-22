@@ -8,7 +8,6 @@ package model;
  * Doel:
  */
 public class Afdeling {
-
     private String afdelingsNaam;
     private String afdelingsPlaats;
 
