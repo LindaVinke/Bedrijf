@@ -3,39 +3,35 @@ package model;
 /**
  * @author Linda Vinke
  *
- * Uitwerking van opdracht 2.1 Bedrijf (class)
+ * Uitwerking van opdracht Bedrijf (class)
  *
  * Doel: oefenen met OOP
  */
 public class Persoon {
-    private static double GRENSWAARDE_BONUS = 4500.00;
+    public static int aantalPersonen;
+    protected final static String DEFAULTWAARDE_NAAM = "Onbekend";
+    protected int personeelsNummer;
+    protected String naam;
+    protected String woonplaats;
+    protected Afdeling afdeling;
 
-    public static int aantalPersonen = 0;
-    private int personeelsNummer;
-    private String naam;
-    private String woonplaats;
-    private double maandSalaris;
-    private Afdeling afdeling;
-
-    public Persoon(String naam, String woonplaats, double maandsalaris, Afdeling afdeling) {
+    public Persoon(String naam, String woonplaats, Afdeling afdeling) {
         this.naam = naam;
         this.woonplaats = woonplaats;
-        this.maandSalaris = maandsalaris;
-        this.personeelsNummer = ++aantalPersonen;
         this.afdeling = afdeling;
+        this.personeelsNummer = ++aantalPersonen;
     }
 
-    public Persoon(String naam) {this(naam, "Onbekend", 0, new Afdeling()); }
+    public Persoon(String naam) {this(naam, "Onbekend", new Afdeling()); }
 
-    public Persoon() {this("Onbekend"); }
+    public Persoon() { this(DEFAULTWAARDE_NAAM); }
 
     public double berekenJaarInkomen() {
-        final double MAANDEN_PER_JAAR = 12;
-        double jaarInkomen = maandSalaris * MAANDEN_PER_JAAR;
-        return jaarInkomen;
+        return 0;
     }
 
-    public boolean heeftRechtOpBonus(){ return  maandSalaris >= GRENSWAARDE_BONUS;
+    public String toString() {
+        return naam + " woont in " + woonplaats + " en werkt op " + afdeling;
     }
 
     public int getPersoneelsNummer() {
@@ -48,10 +44,6 @@ public class Persoon {
         return woonplaats;
     }
 
-    public double getMaandSalaris() {
-        return maandSalaris;
-    }
-
     public Afdeling getAfdeling() {
         return afdeling;
     }
@@ -59,6 +51,7 @@ public class Persoon {
     public static int getAantalPersonen() {
         return aantalPersonen;
     }
+
 
 }
 

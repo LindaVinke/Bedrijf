@@ -3,9 +3,9 @@ package model;
 /**
  * @author Linda Vinke
  * <p>
- * Uitwerking van opdracht 3.1 (dagdeel 3)
+ * Uitwerking van opdracht Bedrijf
  * <p>
- * Doel:
+ * Doel: afdeling toevoegen
  */
 public class Afdeling {
     private String afdelingsNaam;
@@ -15,7 +15,12 @@ public class Afdeling {
         this.afdelingsNaam = afdelingsNaam;
         this.afdelingsPlaats = afdelingsPlaats;
     }
-    public Afdeling(){this("Onbekend", "Onbekend");}
+    public Afdeling(){this("Onbekend", "Onbekend");
+    }
+
+    public String toString(){
+        return "afdeling " + afdelingsNaam + "te " + afdelingsPlaats;
+    }
 
     public String getAfdelingsNaam() {
         return afdelingsNaam;
