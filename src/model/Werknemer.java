@@ -2,10 +2,10 @@ package model;
 
 /**
  * @author Linda Vinke
- * <p>
+ *
  * Uitwerking van opdracht
- * <p>
- * Doel:
+ *
+ * Doel: Werknemer als subklasse van Persoon
  */
 public class Werknemer extends Persoon {
     private static final double GRENSWAARDE_BONUS = 4500.00;
@@ -34,7 +34,6 @@ public class Werknemer extends Persoon {
         } else {
             return 12 * maandsalaris;
         }
-
     }
 
     @Override
@@ -46,10 +45,7 @@ public class Werknemer extends Persoon {
             rechtOpBonus = " zonder recht op bonus";
         }
         return super.toString() + "en is een werknemer" + rechtOpBonus;
-
-
     }
-
 }
 
 

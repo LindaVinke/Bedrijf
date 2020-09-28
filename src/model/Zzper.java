@@ -2,10 +2,10 @@ package model;
 
 /**
  * @author Linda Vinke
- * <p>
- * Uitwerking van opdracht
- * <p>
- * Doel:
+ *
+ * Uitwerking van opdracht Bedrijf
+ *
+ * Doel: Zzper als subklasse van Persoon
  */
 public class Zzper extends Persoon {
     private double uurtarief;

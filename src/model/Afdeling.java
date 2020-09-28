@@ -2,9 +2,9 @@ package model;
 
 /**
  * @author Linda Vinke
- * <p>
+ *
  * Uitwerking van opdracht Bedrijf
- * <p>
+ *
  * Doel: afdeling toevoegen
  */
 public class Afdeling {

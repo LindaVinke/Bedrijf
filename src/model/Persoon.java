@@ -3,11 +3,11 @@ package model;
 /**
  * @author Linda Vinke
  *
- * Uitwerking van opdracht Bedrijf (class)
+ * Uitwerking van opdracht Bedrijf
  *
- * Doel: oefenen met OOP
+ * Doel: beschrijving abstract class
  */
-public class Persoon {
+public abstract class Persoon {
     public static int aantalPersonen;
     protected final static String DEFAULTWAARDE_NAAM = "Onbekend";
     protected int personeelsNummer;
@@ -26,9 +26,7 @@ public class Persoon {
 
     public Persoon() { this(DEFAULTWAARDE_NAAM); }
 
-    public double berekenJaarInkomen() {
-        return 0;
-    }
+    public abstract double berekenJaarInkomen();
 
     public String toString() {
         return naam + " woont in " + woonplaats + " en werkt op " + afdeling;
@@ -51,7 +49,5 @@ public class Persoon {
     public static int getAantalPersonen() {
         return aantalPersonen;
     }
-
-
 }
 
