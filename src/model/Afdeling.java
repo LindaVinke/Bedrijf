@@ -19,7 +19,7 @@ public class Afdeling {
     }
 
     public String toString(){
-        return "afdeling " + afdelingsNaam + "te " + afdelingsPlaats;
+        return "afdeling " + afdelingsNaam + " te " + afdelingsPlaats + " ";
     }
 
     public String getAfdelingsNaam() {

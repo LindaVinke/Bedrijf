@@ -1,7 +1,5 @@
 package model;
 
-import java.util.ArrayList;
-
 /**
  * @author Linda Vinke
  *
@@ -9,7 +7,7 @@ import java.util.ArrayList;
  *
  * Doel: beschrijving abstract class
  */
-public abstract class Persoon {
+public abstract class Persoon implements Comparable<Persoon>{
     public static int aantalPersonen;
     protected final static String DEFAULTWAARDE_NAAM = "Onbekend";
     protected int personeelsNummer;
@@ -29,6 +27,11 @@ public abstract class Persoon {
     public Persoon() { this(DEFAULTWAARDE_NAAM); }
 
     public abstract double berekenJaarInkomen();
+
+    @Override
+    public int compareTo(Persoon anderPersoon){
+        return this.naam.compareTo(anderPersoon.naam);
+    }
 
     public String toString() {
         return naam + " woont in " + woonplaats + " en werkt op " + afdeling;
