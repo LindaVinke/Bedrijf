@@ -44,7 +44,7 @@ public class Werknemer extends Persoon {
         } else {
             rechtOpBonus = " zonder recht op bonus";
         }
-        return super.toString() + "en is een werknemer" + rechtOpBonus + "\n";
+        return super.toString() + "en is een werknemer" + rechtOpBonus;
     }
 
     public void setMaandsalaris(double maandsalaris) throws IllegalArgumentException {
